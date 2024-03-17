@@ -1,0 +1,11 @@
+<!-- themes/templates/themes/theme_list.html -->
+
+<h1>Themes</h1>
+
+<a href="{% url 'theme_create' %}">Create New Theme</a>
+
+<ul>
+    {% for theme in themes %}
+        <li><a href="{% url 'theme_detail' theme.pk %}">{{ theme.title }}</a></li>
+    {% endfor %}
+</ul>
